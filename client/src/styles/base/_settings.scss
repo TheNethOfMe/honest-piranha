@@ -1,0 +1,31 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
+$main-font: "Audiowide";
+
+@import url("https://fonts.googleapis.com/css?family=Glegoo");
+$article-text: "Glegoo";
+
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+$accent-text: "Press Start 2P";
+
+// Neutral w/ orange accent
+$background-color: #343840;
+$card-color: #111919;
+$text-color: #dbdbdb;
+$accent-color: #d17002;
+
+// Other colors
+$hp-red: #c7390a;
+$hp-green: #39c70a;
+$hp-user: #0a98c7;
+$hp-admin: #aaff30;
+$snes-purple: #4f43ae;
+$snes-blue: #b5b6e4;
+$snes-gray: #908a99;
+$snes-lite: #cec9cc;
+
+// Mixins
+@mixin article-text {
+  color: $text-color;
+  font-family: $article-text, serif;
+}

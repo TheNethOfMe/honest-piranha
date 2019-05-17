@@ -1,0 +1,63 @@
+// Entry Item and Menu Widget
+
+.entry-item,
+.entry-item_widget,
+.entry-item_comment {
+  background-color: $card-color;
+}
+
+.entry-item {
+  margin-bottom: 0.5em;
+}
+
+.entry-item:hover {
+  border: 1px $accent-color solid;
+}
+
+.entry-item_title {
+  color: $accent-color;
+}
+
+.entry-item_text {
+  @include article-text;
+}
+
+.widget-items_primary {
+  color: $accent-color;
+  margin: 0;
+  &:hover {
+    color: $snes-purple;
+    cursor: pointer;
+  }
+}
+
+.widget-item_secondary {
+  color: $text-color;
+  padding-left: 2em;
+  &:hover {
+    color: $snes-purple;
+    cursor: pointer;
+  }
+}
+
+.paginator {
+  font-size: 2.2em;
+  span {
+    color: $accent-color;
+  }
+  button {
+    background-color: $snes-purple;
+    border-radius: 25px;
+    margin: 1.3em;
+    &:hover {
+      background-color: $snes-blue;
+      cursor: pointer;
+    }
+    &:disabled {
+      background-color: #eee;
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+}
