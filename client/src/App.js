@@ -20,7 +20,7 @@ import UserRouter from "./components/routers/UserRouter";
 
 import DisplayEntry from "./components/entryDisplay/DisplayEntry";
 
-import "./App.css";
+import "./App.scss";
 
 if (localStorage.jwtToken) {
   // check for token in local storage
