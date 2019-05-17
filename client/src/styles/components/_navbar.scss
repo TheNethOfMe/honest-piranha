@@ -1,0 +1,32 @@
+// Navbar AND footer
+
+.site-navbar {
+  background-color: $card-color;
+  border-bottom: 3px solid $accent-color;
+}
+
+.site-navbar_text,
+.hp-nav-item {
+  color: $text-color;
+  &:hover {
+    color: $snes-purple;
+  }
+}
+
+.site-navbar_accent {
+  color: $accent-color;
+  font-family: $accent-text, sans-serif;
+  &:hover {
+    color: $snes-purple;
+  }
+}
+
+.site-footer {
+  background-color: $card-color;
+  color: $text-color;
+  font-family: $accent-text, sans-serif;
+}
+
+.site-navbar_burger {
+  color: $accent-color;
+}
