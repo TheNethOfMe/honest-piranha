@@ -79,7 +79,7 @@ class EntryListSeries extends Component {
             disabled={page === 1}
             onClick={() => this.paginate("back")}
           >
-            <i class="fas fa-arrow-alt-circle-left" />
+            <i className="fas fa-arrow-alt-circle-left" />
           </button>
           <span>Page {page}</span>
           <button
@@ -87,7 +87,7 @@ class EntryListSeries extends Component {
             disabled={page === lastPage}
             onClick={() => this.paginate("forward")}
           >
-            <i class="fas fa-arrow-alt-circle-right" />
+            <i className="fas fa-arrow-alt-circle-right" />
           </button>
         </div>
       </div>

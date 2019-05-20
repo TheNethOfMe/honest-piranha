@@ -23,6 +23,7 @@ class CreateEntry extends Component {
       description: "",
       series: "",
       youtubeId: "",
+      podcastId: "",
       games: "",
       duration: "",
       errors: {},
@@ -70,6 +71,7 @@ class CreateEntry extends Component {
       description: this.state.description,
       series: this.state.series,
       youtubeId: this.state.youtubeId,
+      podcastId: this.state.podcastId,
       games: this.state.games,
       duration: this.state.duration
     };
@@ -132,6 +134,15 @@ class CreateEntry extends Component {
                     value={this.state.youtubeId}
                     onChange={this.onChange}
                     error={errors.youtubeId}
+                  />
+                )}
+                {this.state.entryType === "podcast" && (
+                  <InputTextField
+                    placeholder="Podcast ID"
+                    name="podcastId"
+                    value={this.state.podcastId}
+                    onChange={this.onChange}
+                    error={errors.podcastId}
                   />
                 )}
                 {(this.state.entryType === "video" ||
