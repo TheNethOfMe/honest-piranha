@@ -7,6 +7,7 @@ module.exports = function getEntryFields(data) {
   entryFields.description = data.description;
   entryFields.series = data.series;
   if (data.youtubeId) entryFields.youtubeId = data.youtubeId;
+  if (data.podcastId) entryFields.podcastId = data.podcastId;
   if (data.duration) entryFields.duration = data.duration;
   if (data.blog) entryFields.blog = data.blog;
   if (typeof data.games !== "undefined") {

@@ -35,6 +35,9 @@ module.exports = async function validateEntryInput(data) {
   if (Validator.isEmpty(data.youtubeId) && data.entryType === "video") {
     errors.youtubeId = "Videos must have a YouTube ID.";
   }
+  if (Validator.isEmpty(data.podcastId) && data.entryType === "podcast") {
+    errors.podcastId = "Podcasts must have a podcast ID.";
+  }
   if (Validator.isEmpty(data.duration) && data.entryType !== "blog") {
     errors.duration = "Videos and podcasts must have a duration.";
   }
