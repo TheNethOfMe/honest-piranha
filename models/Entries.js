@@ -26,6 +26,10 @@ const EntrySchema = new Schema({
     // video only
     type: String
   },
+  podcastId: {
+    // podcast only
+    type: String
+  },
   games: {
     type: [String]
   },

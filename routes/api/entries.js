@@ -6,12 +6,9 @@ const passport = require("passport");
 // Validation
 const validateEntryInput = require("../../validation/entry");
 const getEntryFields = require("../../validation/entry-fields");
-const getCommentCode = require("../../validation/comment-coding");
 
 // Load Models
 const Entry = require("../../models/Entries");
-const Series = require("../../models/Series");
-const User = require("../../models/User");
 
 // @route   GET api/entries/
 // @desc    get all entries
