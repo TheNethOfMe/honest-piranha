@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import VideoDisplay from "./VideoDisplay";
+import PodcastDisplay from "./PodcastDisplay";
 import { getOneEntry } from "../../actions/entryActions";
 import { getEntryComments } from "../../actions/commentActions";
 import Spinner from "../common/Spinner";
@@ -38,6 +39,8 @@ class DisplayEntry extends Component {
       displayHeader =
         entry.entryType === "video" ? (
           <VideoDisplay ytid={entry.youtubeId} title={entry.title} />
+        ) : entry.entryType === "podcast" ? (
+          <PodcastDisplay pcid={entry.podcastId} title={entry.title} />
         ) : (
           <img
             className="card-img-top display-entry_img"
@@ -117,6 +120,7 @@ const mapStateToProps = state => ({
   comments: state.comments
 });
 
-export default connect(mapStateToProps, { getOneEntry, getEntryComments })(
-  DisplayEntry
-);
+export default connect(
+  mapStateToProps,
+  { getOneEntry, getEntryComments }
+)(DisplayEntry);
