@@ -9,6 +9,8 @@ This is a landing page I've created in the MERN stack for my YouTube videos and 
 
 Thanks for checking this out. If you want to know more about my site as it exists, complete with screenshots, [check out that documentation here](./honpron_docs). If you just want to know more about the tech behind it and some pointers for how you could adapt this for your own uses, keep reading!
 
+And if you want to visit the live site, [go nuts!](http://honestpiranha.com)
+
 ## Tools used
 
 As mentioned above, this project is built on the MERN stack (MongoDB, Express, React, and Node) and uses NPM for it's dependancies. The backend uses Mongoose to create db schemas and bcrypt, passport, and passport-jwt to handle authentication.

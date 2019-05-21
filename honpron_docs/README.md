@@ -73,7 +73,7 @@ Administrator accounts can only be created by other Administrators. Admins have 
 
 Admins can message other users and check their own messages just like regular users. However, they also have an option called "Check Honest Piranha Messages" which lets them check tickets sent to the site by other users. They can choose to close a ticket with a response to the original sender or without sending one. You may notice that there is a blue border on the left side of the ticket displayed below...
 
-![Example of a ticket in the Honest Piranha Messages area](./admin_tickets_list)
+![Example of a ticket in the Honest Piranha Messages area](./admin_tickets_list.png)
 
 This one is blue because the content of the message hasn't triggered the comment coding system. By default, all messages are labeled as "code-blue", however, if a user uses certain words, this will be found automatically and make the message either "code-yellow" or "code-red" depending on what they've said. This gives administrators a head's up that the user may be using offensive language.
 
