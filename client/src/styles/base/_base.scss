@@ -18,6 +18,10 @@ body {
   flex-grow: 1;
 }
 
+h1 {
+  text-align: center;
+}
+
 a,
 a:hover {
   text-decoration: none;
@@ -102,6 +106,9 @@ p {
   border-radius: 15px;
   color: $text-color;
   padding: 1em;
+  h3 {
+    text-align: center;
+  }
 }
 
 // used for components that produce a panel
@@ -194,4 +201,9 @@ p {
 // delete account page
 .hp-card_delete-account p {
   margin: 1em;
+}
+
+// not found page
+.notfound-page {
+  color: $accent-color;
 }
