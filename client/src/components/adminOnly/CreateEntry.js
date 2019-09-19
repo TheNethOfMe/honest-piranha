@@ -19,6 +19,7 @@ class CreateEntry extends Component {
     super(props);
     this.state = {
       title: "",
+      dateAdded: "",
       entryType: "video",
       description: "",
       series: "",
@@ -26,6 +27,7 @@ class CreateEntry extends Component {
       podcastId: "",
       games: "",
       duration: "",
+      imageURL: "",
       errors: {},
       id: this.props.match.params.id || null
     };
@@ -73,8 +75,16 @@ class CreateEntry extends Component {
       youtubeId: this.state.youtubeId,
       podcastId: this.state.podcastId,
       games: this.state.games,
-      duration: this.state.duration
+      duration: this.state.duration,
+      imageURL: this.state.imageURL
     };
+    console.log("FIRE ONE", entryData);
+    if (this.state.dateAdded) {
+      const enteredDate = new Date(this.state.dateAdded * 1000);
+      if (enteredDate instanceof Date && !isNaN(enteredDate.valueOf())) {
+        entryData.dateAdded = enteredDate;
+      }
+    }
     if (this.state.id) {
       this.props.updateEntry(this.state.id, entryData, this.props.history);
     } else {
@@ -145,6 +155,15 @@ class CreateEntry extends Component {
                     error={errors.podcastId}
                   />
                 )}
+                {this.state.entryType === "podcast" && (
+                  <InputTextField
+                    placeholder="Image URL"
+                    name="imageURL"
+                    value={this.state.imageURL}
+                    onChange={this.onChange}
+                    error={errors.imageURL}
+                  />
+                )}
                 {(this.state.entryType === "video" ||
                   this.state.entryType === "podcast") && (
                   <InputTextField
@@ -173,6 +192,15 @@ class CreateEntry extends Component {
                   info="Separate games with commas. Ex. Game 1, Game 2"
                 />
                 {displayForm}
+                <InputTextField
+                  type="number"
+                  name="dateAdded"
+                  placeholder="Date Published in Unix"
+                  value={this.state.dateAdded}
+                  errors={errors.dateAdded}
+                  info="Use unix timestamp or leave blank for today's date."
+                  onChange={this.onChange}
+                />
                 <input
                   type="submit"
                   className="btn btn-orange-block btn-block mt-1"

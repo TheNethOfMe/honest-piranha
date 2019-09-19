@@ -45,7 +45,11 @@ const EntrySchema = new Schema({
     type: Number,
     default: 0
   },
-  favorites: [String]
+  favorites: [String],
+  imageURL: {
+    // podcast only
+    type: String
+  }
 });
 
 module.exports = Entry = mongoose.model("entries", EntrySchema);
