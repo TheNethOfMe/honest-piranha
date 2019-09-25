@@ -19,7 +19,6 @@ class EntryItem extends Component {
       1}/${date.getDate()}/${date.getFullYear()}`;
     return (
       <div className="card entry-item">
-        {console.log(entry)}
         <Link to={routerLink}>
           <div className="card-body text-center">
             <p className="text-muted text-left">{entry.series}</p>
@@ -60,9 +59,3 @@ EntryItem.propTypes = {
 };
 
 export default connect()(EntryItem);
-
-// {" "}
-//                   {entry.comments === 1 ? "Comment" : "Comments"}
-
-// {" "}
-//                   {entry.favorites.length === 1 ? "Like" : "Likes"}
