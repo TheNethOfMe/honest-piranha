@@ -6,6 +6,7 @@ import entryReducer from "./entryReducer";
 import msgReducer from "./msgReducer";
 import commentReducer from "./commentReducer";
 import ticketReducer from "./ticketReducer";
+import menuReducer from "./menuReducer";
 
 export default combineReducers({
   auth: authReducer,
@@ -14,5 +15,6 @@ export default combineReducers({
   entry: entryReducer,
   messages: msgReducer,
   comments: commentReducer,
-  tickets: ticketReducer
+  tickets: ticketReducer,
+  menu: menuReducer
 });

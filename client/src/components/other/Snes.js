@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import snesData from "../../utils/snesData";
 
 class Snes extends Component {
   render() {
@@ -8,7 +9,9 @@ class Snes extends Component {
           <h1 className="accent-text">SNEScapades Rankings</h1>
           <div className="hp-card">
             <ol className="snes-list">
-              <li>Super Mario World</li>
+              {snesData.map((game, idx) => {
+                return <li key={idx}>{game.title}</li>;
+              })}
             </ol>
           </div>
         </div>

@@ -10,6 +10,7 @@ const entries = require("./routes/api/entries");
 const messages = require("./routes/api/messages");
 const comments = require("./routes/api/comments");
 const tickets = require("./routes/api/tickets");
+const menu = require("./routes/api/menu");
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.use("/api/entries", entries);
 app.use("/api/messages", messages);
 app.use("/api/comment", comments);
 app.use("/api/tickets", tickets);
+app.use("/api/menu", menu);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));

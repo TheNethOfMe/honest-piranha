@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import SnesList from "./SnesList";
 
 class PodcastDisplay extends Component {
   render() {
-    const podcastSrc = `https://anchor.fm/honest-piranha/embed/episodes/${
-      this.props.pcid
-    }`;
+    const podcastSrc = `https://anchor.fm/honest-piranha/embed/episodes/${this.props.pcid}`;
     return (
-      <div className="video-wrapper">
+      <div className="podcast-wrapper">
         <iframe
           width="400px"
           height="102px"
@@ -17,6 +16,7 @@ class PodcastDisplay extends Component {
           title={this.props.title}
           scrolling="no"
         />
+        <SnesList title={this.props.title} />
       </div>
     );
   }

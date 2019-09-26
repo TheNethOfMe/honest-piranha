@@ -9,6 +9,7 @@ module.exports = function getEntryFields(data) {
   if (data.youtubeId) entryFields.youtubeId = data.youtubeId;
   if (data.podcastId) entryFields.podcastId = data.podcastId;
   if (data.duration) entryFields.duration = data.duration;
+  if (data.imageURL) entryFields.imageURL = data.imageURL;
   if (data.blog) entryFields.blog = data.blog;
   if (typeof data.games !== "undefined") {
     entryFields.games = data.games.split(", ");

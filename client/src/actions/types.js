@@ -28,3 +28,6 @@ export const GET_TICKETS = "GET_TICKETS";
 export const TICKETS_LOADING = "TICKETS_LOADING";
 export const GET_ONE_TICKET = "GET_ONE_TICKET";
 export const TICKETS_CLEAR = "TICKETS_CLEAR";
+
+export const GET_MENU_ITEMS = "GET_MENU_ITEMS";
+export const MENU_LOADING = "MENU_LOADING";
