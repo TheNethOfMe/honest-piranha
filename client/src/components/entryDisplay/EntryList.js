@@ -12,7 +12,7 @@ class EntryList extends Component {
     this.state = {
       allEntries: [],
       visableEntries: [],
-      newPodcast: null,
+      // newPodcast: null,
       page: 1,
       lastPage: null
     };
@@ -27,14 +27,14 @@ class EntryList extends Component {
       const allEntries = nextEntries;
       const visableEntries = nextEntries.slice(0, 10);
       const lastPage = Math.ceil(nextEntries.length / 10);
-      const newPodcast = allEntries.find(entry => {
-        return entry.entryType === "podcast";
-      });
+      // const newPodcast = allEntries.find(entry => {
+      //   return entry.entryType === "podcast";
+      // });
       this.setState({
         allEntries,
         lastPage,
         visableEntries,
-        newPodcast,
+        // newPodcast,
         page: 1
       });
     }
@@ -53,7 +53,7 @@ class EntryList extends Component {
   }
   render() {
     const { entries, loading } = this.props.entries;
-    const { page, lastPage, visableEntries, newPodcast } = this.state;
+    const { page, lastPage, visableEntries } = this.state;
     let displayMain, displaySmall;
     if (entries === null || loading) {
       displayMain = <Spinner />;
@@ -62,8 +62,8 @@ class EntryList extends Component {
       displayMain = visableEntries.map(entry => {
         return <EntryItem key={entry._id} entry={entry} />;
       });
-      if (newPodcast)
-        displaySmall = <EntryItem key={newPodcast._id} entry={newPodcast} />;
+      // if (newPodcast)
+      //   displaySmall = <EntryItem key={newPodcast._id} entry={newPodcast} />;
     }
     return (
       <div className="container">
