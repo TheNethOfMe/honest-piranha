@@ -61,3 +61,20 @@
     }
   }
 }
+
+.other-widgets {
+  background: $card-color;
+  h5 {
+    color: $snes-purple;
+  }
+  ul {
+    color: $accent-color;
+  }
+  p {
+    @include article-text;
+    padding: 4px;
+    span {
+      color: $accent-color;
+    }
+  }
+}

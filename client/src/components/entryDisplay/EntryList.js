@@ -5,6 +5,7 @@ import { getAllEntries } from "../../actions/entryActions";
 import Spinner from "../common/Spinner";
 import EntryItem from "./EntryItem";
 import MenuWidget from "./MenuWidget";
+import OtherWidgets from "./OtherWidgets";
 
 class EntryList extends Component {
   constructor(props) {
@@ -12,7 +13,6 @@ class EntryList extends Component {
     this.state = {
       allEntries: [],
       visableEntries: [],
-      // newPodcast: null,
       page: 1,
       lastPage: null
     };
@@ -27,14 +27,10 @@ class EntryList extends Component {
       const allEntries = nextEntries;
       const visableEntries = nextEntries.slice(0, 10);
       const lastPage = Math.ceil(nextEntries.length / 10);
-      // const newPodcast = allEntries.find(entry => {
-      //   return entry.entryType === "podcast";
-      // });
       this.setState({
         allEntries,
         lastPage,
         visableEntries,
-        // newPodcast,
         page: 1
       });
     }
@@ -54,16 +50,13 @@ class EntryList extends Component {
   render() {
     const { entries, loading } = this.props.entries;
     const { page, lastPage, visableEntries } = this.state;
-    let displayMain, displaySmall;
+    let displayMain;
     if (entries === null || loading) {
       displayMain = <Spinner />;
-      displaySmall = <Spinner />;
     } else {
       displayMain = visableEntries.map(entry => {
         return <EntryItem key={entry._id} entry={entry} />;
       });
-      // if (newPodcast)
-      //   displaySmall = <EntryItem key={newPodcast._id} entry={newPodcast} />;
     }
     return (
       <div className="container">
@@ -71,14 +64,14 @@ class EntryList extends Component {
           <div className="col-md-8">{displayMain}</div>
           <div className="col-md-4">
             <MenuWidget />
-            {displaySmall}
+            <OtherWidgets />
           </div>
         </div>
         <div className="row justify-content-center small-only">
           <div className="col-md-12">
             <MenuWidget />
+            <OtherWidgets />
             {displayMain}
-            {displaySmall}
           </div>
         </div>
         <div className="paginator">
