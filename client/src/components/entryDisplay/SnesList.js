@@ -16,7 +16,8 @@ class SnesList extends Component {
     this.setState({ listIsDisplayed: toggleTo });
   }
   render() {
-    const episode = parseInt(this.props.title.split(" ")[1].split("")[1]);
+    // const episode = parseInt(this.props.title.split(" ")[1].split("")[1]);
+    const episode = parseInt(this.props.title.match(/\d+/)[0]);
 
     return (
       <div>
