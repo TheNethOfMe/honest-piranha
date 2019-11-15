@@ -10,7 +10,7 @@ export default class OtherWidgets extends Component {
           platforms.
         </p>
         <ul className="platform-links">
-          <li>Comming soon</li>
+          <li>Coming soon</li>
         </ul>
         <h5>Like Us</h5>
         <p>
